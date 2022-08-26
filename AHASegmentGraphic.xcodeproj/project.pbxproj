@@ -11,6 +11,10 @@
 		156F6D6628B37BB2004B5F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156F6D6528B37BB2004B5F1C /* Assets.xcassets */; };
 		156F6D6928B37BB2004B5F1C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156F6D6728B37BB2004B5F1C /* MainMenu.xib */; };
 		156F6D6B28B37BB2004B5F1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 156F6D6A28B37BB2004B5F1C /* main.m */; };
+		156F6D7628B3805E004B5F1C /* DSRGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 156F6D7428B3805E004B5F1C /* DSRGBColor.m */; };
+		156F6D7728B3805E004B5F1C /* DSColorLut.m in Sources */ = {isa = PBXBuildFile; fileRef = 156F6D7528B3805E004B5F1C /* DSColorLut.m */; };
+		156F6D7A28B3807C004B5F1C /* DragDropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156F6D7928B3807C004B5F1C /* DragDropImageView.m */; };
+		156F6D7D28B38C64004B5F1C /* DS2DMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 156F6D7B28B38C64004B5F1C /* DS2DMath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,14 @@
 		156F6D6828B37BB2004B5F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		156F6D6A28B37BB2004B5F1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		156F6D6C28B37BB2004B5F1C /* AHASegmentGraphic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AHASegmentGraphic.entitlements; sourceTree = "<group>"; };
+		156F6D7228B3805E004B5F1C /* DSColorLut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSColorLut.h; sourceTree = "<group>"; };
+		156F6D7328B3805E004B5F1C /* DSRGBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRGBColor.h; sourceTree = "<group>"; };
+		156F6D7428B3805E004B5F1C /* DSRGBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRGBColor.m; sourceTree = "<group>"; };
+		156F6D7528B3805E004B5F1C /* DSColorLut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSColorLut.m; sourceTree = "<group>"; };
+		156F6D7828B3807C004B5F1C /* DragDropImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropImageView.h; sourceTree = "<group>"; };
+		156F6D7928B3807C004B5F1C /* DragDropImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropImageView.m; sourceTree = "<group>"; };
+		156F6D7B28B38C64004B5F1C /* DS2DMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DS2DMath.m; sourceTree = "<group>"; };
+		156F6D7C28B38C64004B5F1C /* DS2DMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DS2DMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,14 @@
 		156F6D6128B37BAE004B5F1C /* AHASegmentGraphic */ = {
 			isa = PBXGroup;
 			children = (
+				156F6D7C28B38C64004B5F1C /* DS2DMath.h */,
+				156F6D7B28B38C64004B5F1C /* DS2DMath.m */,
+				156F6D7828B3807C004B5F1C /* DragDropImageView.h */,
+				156F6D7928B3807C004B5F1C /* DragDropImageView.m */,
+				156F6D7228B3805E004B5F1C /* DSColorLut.h */,
+				156F6D7528B3805E004B5F1C /* DSColorLut.m */,
+				156F6D7328B3805E004B5F1C /* DSRGBColor.h */,
+				156F6D7428B3805E004B5F1C /* DSRGBColor.m */,
 				156F6D6228B37BAE004B5F1C /* AppDelegate.h */,
 				156F6D6328B37BAE004B5F1C /* AppDelegate.m */,
 				156F6D6528B37BB2004B5F1C /* Assets.xcassets */,
@@ -132,7 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156F6D7A28B3807C004B5F1C /* DragDropImageView.m in Sources */,
 				156F6D6B28B37BB2004B5F1C /* main.m in Sources */,
+				156F6D7D28B38C64004B5F1C /* DS2DMath.m in Sources */,
+				156F6D7628B3805E004B5F1C /* DSRGBColor.m in Sources */,
+				156F6D7728B3805E004B5F1C /* DSColorLut.m in Sources */,
 				156F6D6428B37BAE004B5F1C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
