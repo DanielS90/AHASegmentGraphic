@@ -12,6 +12,8 @@
 #import "DragDropImageView.h"
 #import "DS2DMath.h"
 
+#define DS_NSColorFromRGB(rgbValue) [NSColor colorWithCalibratedRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface AppDelegate ()
 @property (strong) IBOutlet NSWindow *window;
 
@@ -208,7 +210,9 @@
     
     if (self.values.stringValue.length > 0)
     {
-        NSArray *values = [self.values.stringValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" \n\r\t,"]];
+        NSMutableCharacterSet *set = [NSMutableCharacterSet whitespaceCharacterSet];
+        [set addCharactersInString:@"\n,"];
+        NSArray *values = [self.values.stringValue componentsSeparatedByCharactersInSet:set];
         
         CGPoint centerPoint = CGPointMake(contextHeight / 2, contextHeight / 2);
         CGFloat graphicSize = 990;
@@ -553,7 +557,7 @@
             self.colorValue4.stringValue = @"";
             self.color5.color = [NSColor clearColor];
             self.colorValue5.stringValue = @"";
-            self.color6.color = [NSColor colorWithRed:0.0 green:150.0 / 255.0 blue:200.0 / 255.0 alpha:1.0];
+            self.color6.color = DS_NSColorFromRGB(0x1f78b4); //blue
             self.colorValue6.stringValue = @"15";
         }
         else if (presetIndex == 1)
@@ -603,9 +607,9 @@
         }
         else if (presetIndex == 4)
         {
-            self.color1.color = [NSColor colorWithRed:0.0 / 255.0 green:150.0 / 255.0 blue:200.0 / 255.0 alpha:1.0];
+            self.color1.color = DS_NSColorFromRGB(0x1f78b4); //blue
             self.colorValue1.stringValue = @"-3";
-            self.color2.color = [NSColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+            self.color2.color = [NSColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]; //white
             self.colorValue2.stringValue = @"0";
             self.color3.color = [NSColor clearColor];
             self.colorValue3.stringValue = @"";
@@ -613,7 +617,7 @@
             self.colorValue4.stringValue = @"";
             self.color5.color = [NSColor clearColor];
             self.colorValue5.stringValue = @"";
-            self.color6.color = [NSColor colorWithRed:255.0 / 255.0 green:70.0 / 255.0 blue:0.0 / 255.0 alpha:1.0];
+            self.color6.color = DS_NSColorFromRGB(0xe31a1c); //red
             self.colorValue6.stringValue = @"3";
         }
         
