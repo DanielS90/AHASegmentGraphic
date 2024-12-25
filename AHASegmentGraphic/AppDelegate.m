@@ -216,7 +216,7 @@
         
         CGPoint centerPoint = CGPointMake(contextHeight / 2, contextHeight / 2);
         CGFloat graphicSize = 990;
-        CGFloat segmentThickness = graphicSize / 8;
+        CGFloat segmentThickness = values.count > 12 ? graphicSize / 8 : graphicSize / 7;
         for (int segment = 1; segment <= 17; segment++)
         {
             NSColor *color = [NSColor whiteColor];
@@ -225,6 +225,10 @@
             {
                 text = [values objectAtIndex:segment - 1];
                 color = text.length > 0 ? [[lut interpolatedColorForValue:[NSNumber numberWithDouble:text.doubleValue]] convertToColor] : [NSColor whiteColor];
+            }
+            else if (segment % 6 == 1)
+            {
+                break;
             }
             color = [color colorUsingColorSpace:[NSColorSpace genericRGBColorSpace]];
             [color setFill];
